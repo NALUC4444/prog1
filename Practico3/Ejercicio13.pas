@@ -18,18 +18,18 @@ begin
     read(dato1);
     read(dato2);
     readln(dato3);
-    if (dato1 = 'A') or (dato1 = 'B') or (dato1 = 'C') or (dato1 = 'D') or (dato1 = 'E') or (dato1 = 'F') then
-        dg1 := ord(dato1) - ord('A') + 10
-    else //Comprobar si ingreso digito
-        dg1 := ord(dato1) - ord('0');
-    if (dato2 = 'A') or (dato2 = 'B') or (dato2 = 'C') or (dato2 = 'D') or (dato2 = 'E') or (dato2 = 'F') then
-        dg2 := ord(dato2) - ord('A') + 10
-    else //Comprobar si ingreso digito
-        dg2 := ord(dato2) - ord('0');
-    if (dato3 = 'A') or (dato3 = 'B') or (dato3 = 'C') or (dato3 = 'D') or (dato3 = 'E') or (dato3 = 'F') then
-        dg3 := ord(dato3) - ord('A') + 10
-    else //Comprobar si ingreso digito
-        dg3 := ord(dato2) - ord('0');
+    case dato1 of
+        'A'..'F' : dg1 := ord(dato1) - ord('A') + 10;
+        '0'..'9' : dg1 := ord(dato1) - ord('0');
+    end;
+    case dato2 of
+        'A'..'F' : dg2 := ord(dato2) - ord('A') + 10;
+        '0'..'9' : dg2 := ord(dato2) - ord('0');
+    end;
+    case dato3 of
+        'A'..'F' : dg3 := ord(dato3) - ord('A') + 10;
+        '0'..'9' : dg3 := ord(dato3) - ord('0');
+    end;
     //Empieza parte de cuentas: a × 16^2 + b × 16 + c
     resultado := (dg1 * sqr(16)) + (dg2 * 16) + dg3;
     writeln('Hexadecimal ', dato1+dato2+dato3, ' = Decimal ', resultado);
