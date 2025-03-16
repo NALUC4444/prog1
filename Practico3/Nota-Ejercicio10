@@ -1,0 +1,30 @@
+En espera de que quieras probar varios ejemplos en el "Ejercicio10.pas" tienes que tener el siguiente codigo en el archivo del ejercicio:
+
+program P3Ej10;
+CONST 
+    Constante1 = 77; //Monto fijo
+    Constante2 = 56; //Tarifa Constante2
+var
+    variable1, variable2 : real;
+begin
+    write('Ingrese variable1 del paquete: ');
+    readln(variable1);
+    while (variable1 >= 0) do
+    begin
+        if (variable1 <= 1.00) then variable2 := Constante1 //Dado por la letra
+        else if (variable1 > 1.00) and (variable1 <= 2.00) then variable2 := Constante1 + Constante2 //77+56
+        else if (variable1 > 2.00) and (variable1 <= 3.00) then variable2 := Constante1 + (Constante2*2)
+        else //Si vale mas de 2.00
+        begin
+            variable2 := Constante1 + (Constante2 * (trunc(variable1))); //77 + (56 * (kg-1))
+        end;
+        writeln('   variable1 ', ' Costo');
+        writeln(variable1:7:2,variable2:7:2);
+        {Para actualizar las variables y no quedar en un bucle infinito las siguientes dos lineas:}
+        write('Ingrese variable1 del paquete: ');
+        readln(variable1);
+    end; //Cierra bucle while
+end. //Cierre programa
+
+El bucle while permite que coloques infinitos ejemplos hasta que le ingreses un valor N negativo (N < 0), de esa manera puedes probar varios ejemplos directamente.
+Obviamente donde estan los nombres variables y constantes depende de lo que desees colocar.
