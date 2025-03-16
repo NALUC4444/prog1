@@ -19,9 +19,10 @@ begin
     readln(peso);
     if (peso <= 1.00) then precio := envio //Dado por la letra
     else if (peso > 1.00) and (peso <= 2.00) then precio := envio + Extra //77+56
+    else if (peso > 2.00) and (peso <= 3.00) then precio := envio + (Extra*2)
     else //Si vale mas de 2.00
     begin
-        precio := envio + (Extra * (trunc(peso)-1)); //77 + (56 * (kg-1))
+        precio := envio + (Extra * (trunc(peso))); //77 + (56 * (kg-1))
     end;
     writeln('   Peso ', ' Costo');
     writeln(peso:7:2,precio:7:2);
