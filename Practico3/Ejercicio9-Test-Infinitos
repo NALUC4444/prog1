@@ -30,4 +30,4 @@ begin
 end.
 
 El bucle while permite que coloques infinitos ejemplos hasta que le ingreses un valor N negativo (N < 0), de esa manera puedes probar varios ejemplos directamente.
-Obviamente donde estan los nombres variables y constantes depende de lo que desees colocar.
+Obviamente donde estan los nombres variables (numeroCompleto, primerValor, SegundoValor, tercerValor, CuartoValor) y constantes puedes poner los nombres que quieras.
