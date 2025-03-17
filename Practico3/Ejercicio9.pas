@@ -12,23 +12,20 @@ var
 begin
     write('Ingrese un numero decimal de a lo sumo 4 cifras: ');
     readln(numero);
-    while (numero > 0) do //para probar varios casos
+    if numero > 1000 then
     begin
-        if numero > 1000 then
-        begin
-            dg1 := numero DIV 1000;
-            dg2 := numero DIV 100 MOD 10; //Obtengo la centena
-            dg3 := numero DIV 10 MOD 10;
-            dg4 := numero MOD 10; //Obtener la unidad
-            write('El numero es: ');
-            writeln(dg1, PUNTO, dg2, dg3, dg4);
-        end
-        else //Si es un valor menor a mil
-        begin
-            write('El numero es: ');
-            writeln(numero);
-        end; //Cierra else
-        write('Ingrese un numero decimal de a lo sumo 4 cifras: ');
-        readln(numero); //Actualizar para comprobar si se hace el bucle
-    end; //Cierra while
+        dg1 := numero DIV 1000;
+        dg2 := numero DIV 100 MOD 10; //Obtengo la centena
+        dg3 := numero DIV 10 MOD 10;
+        dg4 := numero MOD 10; //Obtener la unidad
+        write('El numero es: ');
+        writeln(dg1, PUNTO, dg2, dg3, dg4);
+    end
+    else //Si es un valor menor a mil
+    begin
+        write('El numero es: ');
+        writeln(numero);
+    end; //Cierra else
+    write('Ingrese un numero decimal de a lo sumo 4 cifras: ');
+    readln(numero); //Actualizar para comprobar si se hace el bucle
 end.
