@@ -3,29 +3,29 @@ En espera de que quieras probar varios ejemplos en el "Ejercicio10.pas" tienes q
 program P3Ej9;
 CONST PUNTO = '.';
 var
-    numero, dg1, dg2, dg3, dg4 : integer;
+    numeroCompleto, primerValor, SegundoValor, tercerValor, CuartoValor : integer;
 
 begin
     write('Ingrese un numero decimal de a lo sumo 4 cifras: ');
-    readln(numero);
-    while (numero > 0) do //para probar varios casos
+    readln(numeroCompleto);
+    while (numeroCompleto > 0) do //para probar varios casos
     begin
-        if numero > 1000 then
+        if numeroCompleto > 1000 then
         begin
-            dg1 := numero DIV 1000;
-            dg2 := numero DIV 100 MOD 10; //Obtengo la centena
-            dg3 := numero DIV 10 MOD 10;
-            dg4 := numero MOD 10; //Obtener la unidad
+            primerValor := numeroCompleto DIV 1000;
+            SegundoValor := numeroCompleto DIV 100 MOD 10; //Obtengo la centena
+            tercerValor := numeroCompleto DIV 10 MOD 10;
+            CuartoValor := numeroCompleto MOD 10; //Obtener la unidad
             write('El numero es: ');
-            writeln(dg1, PUNTO, dg2, dg3, dg4);
+            writeln(primerValor, PUNTO, SegundoValor, tercerValor, CuartoValor);
         end
         else //Si es un valor menor a mil
         begin
             write('El numero es: ');
-            writeln(numero);
+            writeln(numeroCompleto);
         end; //Cierra else
         write('Ingrese un numero decimal de a lo sumo 4 cifras: ');
-        readln(numero); //Actualizar para comprobar si se hace el bucle
+        readln(numeroCompleto); //Actualizar para comprobar si se hace el bucle
     end; //Cierra while
 end.
 
