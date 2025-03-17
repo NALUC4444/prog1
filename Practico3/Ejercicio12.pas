@@ -19,7 +19,10 @@ begin
     begin
         raiz1 := (-b + sqrt(discriminante)) / (2*a);
         raiz2 := (-b - sqrt(discriminante)) / (2*a);
-        writeln('Dos raices reales diferentes: ', raiz1:7:2, ' y ', raiz2:7:2);
+        if raiz1 < raiz2 then
+            writeln('Dos raices reales diferentes: ', raiz1:7:2, ' y ', raiz2:7:2)
+        else
+            writeln('Dos raices reales diferentes: ', raiz2:7:2, ' y ', raiz1:7:2);
     end
     else if (discriminante = 0) then
     begin
@@ -30,6 +33,9 @@ begin
     begin
         raiz1 := (-b + sqrt(discriminante)) / (2*a);
         raiz2 := (-b - sqrt(discriminante)) / (2*a);
-        writeln('Dos raices complejas diferentes: ', raiz1:7:2, ' (+/-) i', raiz2:7:2);
+        if raiz1 < raiz2 then
+            writeln('Dos raices complejas diferentes: ', raiz1:7:2, ' (+/-) i', raiz2:7:2)
+        else
+            writeln('Dos raices complejas diferentes: ', raiz2:7:2, ' (+/-) i', raiz1:7:2);
     end;
 end.

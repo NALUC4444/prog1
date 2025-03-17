@@ -7,7 +7,6 @@ un signo de suma (+) debajo de cada aparicion de d. En caso contrario, exhiba el
 cada uno la cantidad de cifras indicada, asuma que ası sera. Incluya mensajes de salida con
 etiquetas descriptivas para el ingreso y el despliegue de datos.*)
 program P3Ej11;
-CONST SeRepite = '+';
 var
     d, n, dg1, dg2, dg3, dg4 : integer;
 
@@ -22,13 +21,13 @@ begin
     dg4 := n MOD 10; //Obtener la unidad
     writeln(dg1, dg2, dg3, dg4);
     if (dg1 = d) then
-        write(SeRepite);
+        write('+');
     if (dg2 = d) then
-        write(' ', SeRepite);
+        write('+');
     if (dg3 = d) then
-        write(' ', ' ', SeRepite);
+        write('+');
     if (dg4 = d) then
-        write(SeRepite)
-    else
+        write('+');
+    if (dg1 <> d) and (dg2 <> d) and (dg3 <> d) and (dg4 <> d) then
         write(d, ' no aparece en ', n);
 end.
