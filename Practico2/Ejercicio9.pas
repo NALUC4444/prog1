@@ -1,6 +1,6 @@
 (*Letra:
 La funcion exp de Pascal calcula un valor igual a la suma de la serie infinita 
-1 + [x/1!] + [(x2)/2!] + [(x3)/3!] + [(x4)/4!],*)
+1 + [x/1!] + [(x^2)/2!] + [(x^3)/3!] + [(x^4)/4!],*)
 program P2Ej9;
 var
     x, suma, valorReal : real;
