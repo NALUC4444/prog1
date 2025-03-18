@@ -8,7 +8,7 @@ var
 begin
     write('Ingrese el valor a calcular: ');
     readln(x);
-    suma := 1 + (x/1) + (x*x/(2*1)) + ((x*x*x)/(3*2*1)) + ((x*x*x*x)/(4*3*2*1))+ ((x*x*x*x*x)/(5*4*3*2*1));
+    suma := 1 + (x/1) + (x*x/(2*1)) + ((x*x*x)/(3*2*1)) + ((x*x*x*x)/(4*3*2*1));
     valorReal := exp(x);
     writeln('Valor introducido: ', x:7:2, ' = ', x);
     writeln('Suma de los cinco terminos = ', suma);
