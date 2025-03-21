@@ -9,14 +9,13 @@ begin
     write('Ingrese un valor para n: '); 
     readln(n);
     write('Ingrese ', n, ' enteros: ');
-    read(actual); //Se usa read() para poder seguir leyendo valores en el bucle for
     mayor := maxint * -1; //Obtener el menor valor posible
     menor := maxint; //Obtener el mayor valor posible
-    for i := 0 to n do //Recorre toda la secuencia de numeros
+    for i := 1 to n do //Recorre toda la secuencia de numeros
     begin
-        if (actual > mayor) then mayor := actual; //Actualizar variable
-        if (actual < menor) then menor := actual;
         read(actual);
+        if (actual > mayor) then mayor := actual
+        else if (actual < menor) then menor := actual;
     end;
     writeln('El mayor entero ingresado es: ', mayor);
     writeln('El menor entero ingresado es: ', mayor);
