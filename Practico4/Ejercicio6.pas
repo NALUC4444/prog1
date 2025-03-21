@@ -18,7 +18,7 @@ begin
         else if (actual < menor) then menor := actual;
     end;
     writeln('El mayor entero ingresado es: ', mayor);
-    writeln('El menor entero ingresado es: ', mayor);
+    writeln('El menor entero ingresado es: ', menor);
 end.
 
 (*Ingrese un valor para n: 8
