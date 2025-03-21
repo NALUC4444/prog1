@@ -20,7 +20,7 @@ begin
     end;
     writeln('El mayor entero ingresado es: ', mayor);
     writeln('El menor entero ingresado es: ', mayor);
-end;
+end.
 
 (*Ingrese un valor para n: 8
 Ingrese 8 enteros: 5 12 36 4 21 95 12 18
