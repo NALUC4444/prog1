@@ -7,18 +7,18 @@ etiquetas descriptivas para el ingreso de datos.*)
 program P3Ej9;
 CONST PUNTO = '.';
 var
-    numero, dg1, dg2, dg3, dg4 : integer;
+    numero, dg1 : integer;
 
 begin
     write('Ingrese un numero decimal de a lo sumo 4 cifras: ');
     readln(numero);
     if numero > 1000 then
     begin
-        dg1 := numero DIV 1000;
+        dg1 := numero DIV 1000; //Solo se necesita este valor
         write('El numero es: ');
         writeln(dg1, PUNTO, numero MOD 1000);
     end
-    else //Si es un valor menor a mil
+    else //Si es un valor menor a mil se devuelve el valor sin modificar
     begin
         write('El numero es: ');
         writeln(numero);
