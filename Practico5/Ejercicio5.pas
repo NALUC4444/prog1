@@ -11,7 +11,36 @@ program P5Ej5;
 CONST centinela = 'X';
 var
     Eleccion : char;
-    SaldoActual, Operacion : integer;
+    SaldoActual, Operacion : real;
 begin
-    
+    write('Ingrese su saldo inicial: ');
+    readln(SaldoActual);
+    write('Desea depositar "D" o retirar "R": ');
+    readln(Eleccion);
+    while Eleccion <> centinela do
+    begin
+        write(Eleccion + ': ');
+        readln(Operacion);
+        case Eleccion of
+            'D', 'd' : SaldoActual := SaldoActual + Operacion;
+            'R', 'r' : SaldoActual := SaldoActual - Operacion;
+        end; //Cierra case..of
+        write('Desea depositar "D" o retirar "R": '); //Actualizar bucle
+        readln(Eleccion);
+    end; //Cierra while
+    writeln(centinela); //Dado por la letra debe mostrar la "X"
+    writeln('El saldo final es: ', SaldoActual:7:2);
 end.
+
+{1200.35
+D 64.12
+R 390.00
+R 289.67
+D 13.02
+R 51.07
+X
+El saldo final es 546.75}
+
+{600.50
+X
+El saldo final es 600.5}
