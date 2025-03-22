@@ -7,13 +7,24 @@ el valor para n de la entrada estandar y despliegue en la salida estandar el val
 de f(x, y) para x e y en ese entorno. Incluya mensajes de salida con etiquetas descriptivas
 para solicitar y exhibir los valores.*)
 program P4Ej12;
-var nPositivo, nNegativo, i, valorActual, maxValor : integer;
+var nPositivo, nNegativo, i, j, valorActual, maxValor : integer;
 begin
     write('Ingrese un valor para n: ');
     readln(nPositivo);
     nNegativo := nPositivo * -1; //Dado por letra es el opuesto a n
-    for i 
+    maxValor := maxint * -1;
+    for i := nNegativo to nPositivo do
+    begin
+        for j := nNegativo to nPositivo do
+        begin
+            valorActual := sqr(j) - (9*i*j) + (sqr(j));
+            if (valorActual > maxValor) then maxValor := valorActual;
+        end; //Cierra for j
+    end; //Cierra for i
+    writeln('El valor maximo para x e y en el entorno de ', nPositivo, ' a ', nPositivo, ' es ', maxValor);
 end.
+
+//j = x;  i = y
 
 {Ingrese un valor para n: 4
 El valor maximo para x e y en el entorno de -4 a 4 es 176}
