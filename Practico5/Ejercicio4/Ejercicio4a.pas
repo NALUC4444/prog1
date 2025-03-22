@@ -20,3 +20,8 @@ begin
     promedio := sumaTotal/cantidad;
     writeln('El promedio es: ', promedio:7:2);
 end;
+
+{Datos ingresados como ejemplo:
+Datos ingresados: 2 4 6 7 8 9 4 8 -1
+Suma total: 2+4+6+7+8+9+4+8 = 48
+Promedio: 2+4+6+7+8+9+4+8/8 = 6.00}

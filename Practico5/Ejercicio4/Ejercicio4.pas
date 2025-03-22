@@ -13,7 +13,8 @@ CONST centinela = -1;
 
 {$Include Ejercicio4b.pas}
 
-{Ya que este ejercicio tiene dos partes las dividimos en dos procedimientos que llamaremos}
+{Ya que este ejercicio tiene dos partes las dividimos en dos procedimientos que llamaremos
+De esta manera ocupamos menos lugar, para probarlos descarga tanto este como los adicionales}
 begin
     CalcularPromedio();
     MaximoMinimo();
