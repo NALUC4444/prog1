@@ -4,5 +4,16 @@ de todos los enteros positivos leidos. Exhiba ambos resultados en la salida esta
 procedure MaximoMinimo();
 var maximoValor, minimoValor, valorActual : integer;
 begin
-    writeln('Entre al procedimiento')
+    write('Ingrese una secuencia de valores: ');
+    read(valorActual);
+    maximoValor := maxint * -1;
+    minimoValor := maxint;
+    while (valorActual <> centinela) do
+    begin
+        if (valorActual > maximoValor) then maximoValor := valorActual
+        else if (valorActual < minimoValor) then minimoValor := valorActual;
+        read(valorActual); //Para avanzar y evitar bucle infinito
+    end;
+    writeln('El maximo valor es: ', maximoValor);
+    writeln('El minimo valor es: ', minimoValor);
 end;
