@@ -6,13 +6,14 @@ iteracion mas adecuada para utilizar (for, while, repeat)? ¿Por que?
 
 La respuesta es obvia, ya que tenemos como fin el -1, significa que tenemos un centinela
 Eso significa que tenemos que usar while o repeat*)
+program P5Ej4;
+CONST centinela = -1;
+
 {$Include Ejercicio4a.pas}
 
 {$Include Ejercicio4b.pas}
 
 {Ya que este ejercicio tiene dos partes las dividimos en dos procedimientos que llamaremos}
-program P5Ej4;
-CONST centinela = -1;
 begin
     CalcularPromedio();
     MaximoMinimo();

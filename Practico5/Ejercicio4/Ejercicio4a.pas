@@ -7,6 +7,7 @@ var
     promedio : real;
 begin
     cantidad := 0; //La letra asume que ingresa un valor al menos entero <> -1
+    sumaTotal := 0;
     write('Escriba una secuencia de valores para sumar: ');
     read(valorActual);
     while (valorActual <> centinela) do
