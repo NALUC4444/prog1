@@ -10,8 +10,10 @@ Eso significa que tenemos que usar while o repeat*)
 
 {$Include Ejercicio4b.pas}
 
+{Ya que este ejercicio tiene dos partes las dividimos en dos procedimientos que llamaremos}
 program P5Ej4;
 CONST centinela = -1;
 begin
-    
+    CalcularPromedio();
+    MaximoMinimo();
 end.
