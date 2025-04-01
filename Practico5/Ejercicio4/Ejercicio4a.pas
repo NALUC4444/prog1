@@ -2,25 +2,23 @@
 (a) Escriba un programa en Pascal que determine la suma y el promedio de todos los
 enteros positivos leidos. Exhiba ambos resultados en la salida estandar.*)
 procedure CalcularPromedio();
-var 
-    valorActual, sumaTotal, cantidad : integer;
+var
+    suma, cantidad, valorActual : integer;
     promedio : real;
 begin
-    cantidad := 0; //La letra asume que ingresa un valor al menos entero <> -1
-    sumaTotal := 0;
-    write('Escriba una secuencia de valores para sumar: ');
+    cantidad := 0;
+    suma := 0;
+    writeln('Ingrese los valores para calcular: ');
     read(valorActual);
-    while (valorActual <> centinela) do
-    begin
-        cantidad := cantidad + 1; //Para usarlo para el promedio
-        sumaTotal := sumaTotal + valorActual; //Llevar la suma total
-        read(valorActual); //Avanza impidiendo el bucle infinito
-    end;
-    writeln('La suma total de valores es: ', sumaTotal);
-    promedio := sumaTotal/cantidad;
-    writeln('El promedio es: ', promedio:7:2);
+    repeat
+        suma := suma + valorActual;
+        cantidad := cantidad + 1;
+        read(valorActual); //Avanzar en el bucle
+    until (valorActual = centinela);
+    promedio := suma / cantidad;
+    writeln('La suma de los valores son: ', suma);
+    write('El promedio es: ', promedio:7:2);
 end;
-
 {Datos ingresados como ejemplo:
 Datos ingresados: 2 4 6 7 8 9 4 8 -1
 Suma total: 2+4+6+7+8+9+4+8 = 48
