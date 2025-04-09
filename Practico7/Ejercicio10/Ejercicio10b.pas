@@ -1,4 +1,4 @@
-program P7Ej10;
+program P7Ej10b;
 
 {$INCLUDE Ejercicio10a.pas}
 
