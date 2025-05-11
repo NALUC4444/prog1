@@ -10,9 +10,9 @@ var
 begin
     for i := 1 to 10 do
     begin
-        auxMatriz[i] := matriz[i, m]; {Auxiliar de resplado}
-        matriz[i, m] := matriz[i, n];
-        matriz[i, n] := auxMatriz[i]; {Ya que el valor lo moví a la anterior línea}
+        auxMatriz[i] := matriz[m, i]; {Auxiliar de resplado}
+        matriz[m, i] := matriz[n, i];
+        matriz[n, i] := auxMatriz[i]; {Ya que el valor lo moví a la anterior línea}
     end;
 end;
 

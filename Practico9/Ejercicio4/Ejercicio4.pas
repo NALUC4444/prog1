@@ -1,6 +1,6 @@
 program P9Ej4;
 type
-    TipoMatriz = array[1..10, 1..10] of integer; {Primero son columna y segundo son fila}
+    TipoMatriz = array[1..10, 1..10] of integer; {Primero son fila y segundo son columna}
     TipoAuxiliar = array[1..10] of integer; {Se usa en el segundo procedimiento}
 
 var 
