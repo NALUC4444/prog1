@@ -7,7 +7,7 @@ type
 
 var
     numeros : Digitos;
-    resultado : integer;
+    resultado, i : integer;
 
 {$INCLUDE Ejercicio8a.pas}
 
