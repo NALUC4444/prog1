@@ -6,7 +6,6 @@ var
     i : integer;
     valor : char;
 begin
-    writeln('Ingrese ', N, ' digitos: ');
     for i := 1 to N do
     begin
         read(valor);
