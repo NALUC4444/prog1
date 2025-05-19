@@ -29,8 +29,3 @@ begin
     writeln(complejo4.re:1:2, ' = ', complejo1.re:1:2, ' * ', complejo2.re:1:2, ' - ', complejo1.im:1:2, ' * ', complejo2.im:1:2);
     writeln(complejo4.im:1:2, ' = ', complejo1.im:1:2, ' * ', complejo2.re:1:2, ' - ', complejo2.im:1:2, ' * ', complejo1.re:1:2);
 end.
-
-{
-re3 = re1 * re2 - im1 * im2
-im3 = im1 * re2 + im2 * re1
-}
