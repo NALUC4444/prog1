@@ -1,35 +1,63 @@
 program P10Ej6;
-type
-    TipoMes = (enero, febrero, marzo, abril, mayo, junio, julio, agosto, setiembre, octubre, noviembre, diciembre);
+type 
+    TipoMes = (
+        enero, febrero, marzo, abril, mayo, junio, 
+        julio, agosto, setiembre, octubre, noviembre, diciembre
+    );
     TipoMesRango = 1..12;
-(*(a) Defina el tipo enumerado TipoMes que represente los meses del año.
-(c) Defina un tipo subrango de los enteros TipoMesRango que represente 
-los meses del año (entre 1 y 12).*)
 
-(*(b) Escriba un procedimiento que reciba un parametro de entrada del tipo TipoMes 
-e imprima el nombre completo del mes correspondiente.*)
-procedure mesCorrecto(a : TipoMes);
+procedure mesCorrecto(mes : TipoMes);
 begin
-    readln(a);
-    writeln('El mes es: ', ord(a));
+    write('El mes elegido es: ');
+    case mes of
+        enero : writeln('enero');
+        febrero : writeln('febrero');
+        marzo : writeln('marzo');
+        abril : writeln('abril');
+        mayo : writeln('mayo');
+        junio : writeln('junio');
+        julio : writeln('julio');
+        agosto : writeln('agosto');
+        setiembre : writeln('septiembre');
+        octubre : writeln('octubre');
+        noviembre : writeln('noviembre');
+        diciembre : writeln('diciembre');
+    end;
 end;
 
-(*(d) Escriba un procedimiento que lea de la entrada un mes representado por el numero (entre 1 y 12) y
-retorne en un parametro de salida una variable de tipo TipoMes.*)
-procedure convertirMes(mes : TipoMesRango);
-var x : TipoMes;
+procedure convertirMes(mesNumero : TipoMesRango);
+{TipoMesRango = 1..12 pero tenemos 0..11}
+var mes : TipoMes;
 begin
-    readln(mes);
-    x := TipoMes(mes);
-    writeln('El mes en base al numero es: ', x);
+    write('El numero ', mesNumero:1, ' pertenece al mes: ');
+    mesNumero := mesNumero - 1; {Obtener el rango 0..11}
+    mes := TipoMes(mesNumero); {Obtener mes correspondiente}
+    case mes of
+        enero : writeln('enero');
+        febrero : writeln('febrero');
+        marzo : writeln('marzo');
+        abril : writeln('abril');
+        mayo : writeln('mayo');
+        junio : writeln('junio');
+        julio : writeln('julio');
+        agosto : writeln('agosto');
+        setiembre : writeln('septiembre');
+        octubre : writeln('octubre');
+        noviembre : writeln('noviembre');
+        diciembre : writeln('diciembre');
+    end;
 end;
 
-var
-    mesLetra : TipoMes;
-    mesNumero : TipoMesRango;
+{Programa principal}
+var 
+    aux : TipoMes;
+    aux2 : TipoMesRango;
 begin
-    write('Ingrese un numero de mes con letra: ');
-    mesCorrecto(mesLetra);
-    write('Ingrese un numero nuevamente: ');
-    convertirMes(mesNumero);
+    write('Ingrese un mes: ');
+    readln(aux);
+    mesCorrecto(aux);
+    write('Ingres numero entre 1 y 12: ');
+    readln(aux2);
+    convertirMes(aux2);
+    readln();
 end.
