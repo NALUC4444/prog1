@@ -11,7 +11,7 @@ begin
         pt : writeln('portugues tiene: ');
     end;
     write('ultima actualizacion: ', articuloReciente.ultima_act.dia);
-    writeln(' ', articuloReciente.ultima_act.mes, '-', ultima_act.anio);
+    writeln('-', articuloReciente.ultima_act.mes, '-', ultima_act.anio);
     write('Tiene ', articuloReciente.visitas, ' visitas');
 end;
 
