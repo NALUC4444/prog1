@@ -26,5 +26,3 @@ begin
     mostrar(art2, en);
     mostrar(art3, pt);
 end;
-
-{(wiki: Wikipedia; idioma: TIdioma; VAR art: TArticulo)}

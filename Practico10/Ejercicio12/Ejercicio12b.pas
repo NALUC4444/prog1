@@ -6,6 +6,7 @@ procedure articuloMasReciente (wiki: Wikipedia; idioma: TIdioma; VAR art: TArtic
 var 
     i : 1..cant_articulos;
 begin
+    {Iniciamos las variables}
     art.ultima_act.dia = wiki[1].ultima_act.dia;
     art.ultima_act.mes = wiki[1].ultima_act.mes;
     art.ultima_act.anio = wiki[1].ultima_act.anio;

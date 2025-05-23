@@ -17,3 +17,5 @@ type
         ultima_act : TFecha;
     end;
     Wikipedia = array [1..cant_articulos] OF TArticulo;
+
+{El ejercicio no puede ser comprobado}
