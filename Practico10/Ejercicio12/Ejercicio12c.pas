@@ -23,7 +23,8 @@ begin
     articuloMasReciente(wiki, en, art2);
     articuloMasReciente(wiki, pt, art3);
     mostrar(art1, es);
-
+    mostrar(art2, en);
+    mostrar(art3, pt);
 end;
 
 {(wiki: Wikipedia; idioma: TIdioma; VAR art: TArticulo)}
