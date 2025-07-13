@@ -3,7 +3,7 @@ type
     Positivo = 1..MaxInt;
     ListaInt = ^TCelda;
     TCelda = record
-        info : integer;
+        info : integer; 
         sig : ListaInt
     end;
 
